@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 left-side">
+      <div class="text-left offset-3">
+        <h2>Singup</h2>
+        <p>We do not share your personal details with anyone</p>
+      </div>
+    </div>
+    <div class="col-md-6 right-side">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div>
+          <label class="input-lable">
+            First Name<br>
+            <input formControlName="fname">
+          </label>
+        </div>
+        <div>
+          <div>
+            <label>
+              Last Name<br>
+              <input formControlName="lname">
+
+            </label>
+          </div>
+
+          <label>
+            Email<br>
+            <input type="email" formControlName="email" required="email">
+
+          </label>
+        </div>
+        <div>
+          <label>
+            Password<br>
+            <input type="password" formControlName="password">
+
+          </label>
+        </div>
+        <div>
+          <label>
+            Confirm Password<br>
+            <input type="password" formControlName="conpassword">
+
+          </label>
+        </div>
+        <div class="sub-btn">
+          <button type="submit" class="mb-5">SignUp</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

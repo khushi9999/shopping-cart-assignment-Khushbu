@@ -1,0 +1,23 @@
+<section>
+    <div class="container mt-5">
+
+        <ngb-carousel #carousel [interval]="20000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+            <ng-template ngbSlide *ngFor="let bannerItem of bannerList; index as i">
+              <ng-container *ngIf="bannerItem.isActive"> 
+              <!-- <div class="carousel-caption">
+                <h3>My slide {{i + 1}} title</h3>
+              </div> -->
+              <a  target="_blank" rel="nofollow noopener noreferrer">
+                <div class="picsum-img-wrapper">
+                  <img src="{{assetsPath}}{{bannerItem.bannerImageUrl}}" alt="{{bannerItem.bannerImageAlt}}"  class="w-100">
+                </div>
+              </a>
+              </ng-container>
+            </ng-template>
+          </ngb-carousel>
+         
+          
+
+    </div>
+</section>
+
