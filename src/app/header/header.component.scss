@@ -1,34 +1,197 @@
-// @import '../../assets/scss/variable.scss';
+.login-singup {
+    text-align: right;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+}
 
-// .login-singup {
-//     text-align: right;
-//     display: inline-block;
-//     font-size: 10px;
-//     font-weight: 500;
-// }
+.banner-img {
+    max-width: 151px;
+}
 
-// .cart-imag {
-//     text-align: right;
-//     background-color: #F0F0F0;
-//     width: 90px;
-//     height: 50px;
-//     float: right;
+.cart-imag {
+    text-align: right;
+    background-color: #F0F0F0;
+    width: 90px;
+    height: 50px;
+    float: right;
 
-//     .cart-logo {
-//         filter: invert(16%) sepia(71%) saturate(5224%) hue-rotate(311deg) brightness(86%) contrast(92%);
-//     }
-// }
+    .cart-logo {
+        filter: invert(16%) sepia(71%) saturate(5224%) hue-rotate(311deg) brightness(86%) contrast(92%);
+    }
+}
 
-// .cart-iteamcount {
-//     white-space: nowrap;
-// }
+.cart-iteamcount {
+    white-space: nowrap;
+}
 
-// .home-product {
-//     font-weight: 500;
-//     color: $gray;
-// }
+.nav .nav-item a {
+    font-weight: 500;
+    color: gray;
+}
 
-// .login-singup-a {
-//     color: $black;
-//     text-decoration: none;
-// }
+.login-singup-a {
+    color: black;
+    text-decoration: none;
+}
+
+// Updatations - Heena
+.relative {
+    position: relative;
+}
+
+.height-90 {
+    height: 90px;
+    width: 100%;
+    box-shadow: 1px 10px 10px #eaeaea;
+}
+
+.nav .nav-item .login-singup-a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-items {
+    width: 63%;
+
+    a {
+       
+        color: #696767 ;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+.login-register {
+    position: absolute;
+    right: 0;
+    top: 2px;
+
+    .login-register-button {
+        color: #000;
+        text-decoration: none;
+
+        &:nth-child(2) {
+            margin-left: 10px;
+        }
+    }
+}
+
+.cart-button {
+    width: 120px;
+    float: right;
+    background-color: #F0F0F0;
+    padding: 5px 10px;
+
+    .cart-icon {
+        width: 35px;
+        display: inline-block;
+        filter: invert(16%) sepia(71%) saturate(5224%) hue-rotate(311deg) brightness(86%) contrast(92%);
+    }
+
+    .cart-count {
+        float: right;
+        padding-top: 7px;
+    }
+}
+
+.margin-top-custom {
+    margin-top: 30px;
+}
+
+@media (min-width: 320px) {
+    .navbar.navbar-inverse {
+
+        .navbar-header {
+
+            a img {
+                width: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 505px) {
+
+    .container,
+    .container-fluid {
+        padding: 0px;
+    }
+
+    .navbar-header {
+        div img {
+            width: 100px;
+            margin-top: 10px;
+        }
+    }
+
+    .height-90 {
+        height: 80px;
+    }
+
+    .login-register {
+        right: 5px;
+    }
+
+    .cart-button-layout {
+        margin-top: 0px;
+        position: absolute;
+        right: 0;
+        width: 100px;
+
+        .cart-button {
+            width: auto;
+            padding: 0px 9px;
+            .cart-icon {
+                width: 25px;
+                .cart-logo{
+                    padding-top: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 482px) {
+    .navbar.navbar-inverse {
+
+        .navbar-header {
+
+            a img {
+                width: 150px;
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width: 482px) {
+    .banner-img {
+        // max-width: 251px;
+    }
+}
+
+
+
+@media  (max-width: 991px) {
+
+    .container-tablet{
+        // max-width: 705px;
+        max-width: 100%;
+
+    }}
+
+
+
+
+.active-header{
+    color: #000 !important;
+}
+.auth-active-header {
+    font-weight: 800;
+    color: #50dae3 !important;
+}

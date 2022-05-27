@@ -1,1 +1,23 @@
 <app-banner></app-banner>
+<section>
+    <div class="container-tablet container mt-5">
+        <div class="row products pt-3 pb-4" *ngFor="let product of categories">
+        
+              <span class="fancy-line"></span>
+            <div class="col-4 product-area mt-5 mb-3">
+                <img class="w-100" src="{{assetsPath}}{{product.imageUrl}}" alt="">
+            </div>
+
+            <div class="align-items-center col-8 d-flex justify-content-center">
+                <div class="text-center">                    
+                    <h1 class="w-600 product-title">{{product.name}}</h1>
+                    <p>{{product.description}}</p>
+                    <button class="pb-md-1 product-btn pt-md-1 px-3">Explore {{product.key}}</button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+</section>

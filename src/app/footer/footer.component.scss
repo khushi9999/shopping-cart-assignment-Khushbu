@@ -1,8 +1,22 @@
-
-//  footer {
-//     text-align: center;
-//     padding: 3px;
+// .footer {
+//     position: fixed;
+//     left: 0;
+//     bottom: 0;
+//     width: 100%;
 //     background-color: #BEBEBE;
 //     color: black;
-//     margin-bottom: 10%;
-//   }
+//     text-align: center;
+//  }
+
+//  Updates - Heena
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-weight: 300;
+  width: 100%;
+  background-color: #eaeaea;
+  color: black;
+  font-size: 12px;
+  padding: 5px;
+}

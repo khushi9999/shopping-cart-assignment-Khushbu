@@ -1,4 +1,8 @@
 {
-  "response": "Success",
-  "responseMessage": "Product added to cart successfully"
+  "cart": [
+    {
+      "response": "Success",
+      "responseMessage": "Product added to cart successfully"
+    }
+  ]
 }

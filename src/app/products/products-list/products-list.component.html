@@ -1,1 +1,47 @@
-<p>products-list works!</p>
+<div class="container-fluid">
+    <div class="container-tablet container visible-xs">
+        <div class="row product-listing">
+            <div class="col-sm-12 col-xs-12">
+                <div class="sidebar-filter">
+                    <app-sidebar-filter></app-sidebar-filter>
+                </div>
+                <div class="main-content">
+                    <div class="container-fluid">
+                        <div class="row mt-2 mb-4 justify-content-center">
+                            <div class=" col-my-sm col-my-tb-12  col-my-sm-6  col-md-4 col-xl-3 border-line-right" *ngFor="let product of products">
+                                <div class="product-item">
+                                    <div class="product-name">
+                                        <h2 style="
+                                        line-height: 25px;
+                                    ">{{product.name}}</h2>
+                                    </div>
+                                    <div class="product-container">
+                                        <div class="product-image">
+                                            <!-- <img src="../../assets/static/images/products/fruit-n-veg/kiwi-green.jpg"> -->
+                                            <img class="w-100" src="{{assetsPath}}{{product.imageURL}}" alt="{{product.name}}">
+                                        </div>
+                                        <div class="product-desc truncate">
+                                            <p>{{product.description}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-options">
+                                        <div class="product-price">
+                                            <p class="" style="padding-top: 10px">MRP Rs. {{product.price}}</p>
+                                        </div>
+                                        <div class="product-button">
+                                            <div class="product-btn buy-btn" (click)="showSuccess(product)" role="button" >Buy Now</div>
+                                        </div>
+
+                                        <div class="product-button-tablet" (click)="showSuccess(product)" role="button">
+                                            <div class="product-btn buy-btn"  >Buy Now @ Rs. {{product.price}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

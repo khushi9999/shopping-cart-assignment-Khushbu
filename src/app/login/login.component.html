@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-xl-6 left-side">
+      <div class="text-left">
+        <h2>Login</h2>
+        <p>Get access to your Orders, Wishlist and Recommendation</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-xl-6 right-side">
+      <form [formGroup]="LoginForm" (ngSubmit)="onSubmit(LoginForm)">
+        <div>
+          <label>
+            Email</label><br>
+          <input type="email" formControlName="email" required="email"><br>
+          <span class="errorMessage" *ngIf="!LoginForm.get('email').valid && LoginForm.get('email').touched ">Please
+            enter Email</span>
+        </div>
+        <div>
+          <label>
+            Password </label><br>
+          <input type="password" formControlName="password"><br>
+          <span class="errorMessage"
+            *ngIf="!LoginForm.get('password').valid && LoginForm.get('password').touched ">Please
+            enter Password</span>
+        </div>
+        <div class="sub-btn">
+          <button type="submit" [disabled]="!LoginForm.valid"
+            [ngClass]="(enableBtn && LoginForm.valid )? 'btn-enable' : 'btn-disable'" class="mb-5">Login</button>
+        </div>
+        <!-- <span class="errorMessage"
+            [ngClass]="(wrongCredintialsMessage) ?  'btn-disable-message' : 'btn-enable-message' ">Wrong UserName and Password
+          </span> -->
+      </form>
+
+    </div>
+  </div>
+</div>

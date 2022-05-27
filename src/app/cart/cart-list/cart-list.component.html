@@ -1,1 +1,31 @@
-<p>cart-list works!</p>
+
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">My Cart <small>({{totalCartItem}} item)</small></h4>
+
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"
+      style="opacity: 1;font-size: 26px;"> <i class="fa fa-close fa-fw text-white"></i></button>
+  </div>
+  <div class="modal-body">
+    <ng-container *ngFor="let item of cartItem">
+      <app-card-item [item]="item"></app-card-item>
+    </ng-container>
+   
+    <!-- <app-card-item></app-card-item>
+    <app-card-item></app-card-item>
+    <app-card-item></app-card-item> -->
+    <br />
+  </div>
+  <div class="modal-footer d-block">
+    <p class="text-center" style="margin-top: 15px;">Promo code can be applied on payment page</p>
+    <div class="d-flex product-btn" style="position: relative;;height: 46px;border-radius: 5px;">
+      <p style="left: 10px;top: 12px;position: absolute;">
+        Proceed to Checkout
+      </p>
+      <p style="right: 10px;top: 12px;position: absolute;">
+        Rs.{{totalprice}} >
+      </p>
+    </div>
+    <!-- <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button> -->
+  </div>
+</ng-template>

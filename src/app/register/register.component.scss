@@ -1,30 +1,45 @@
-// @import '../../assets/scss/variable.scss';
+/*  left side CSS */
+.left-side {
+    .text-left {
+        float: left;
+    }
+}
 
-// .left-side {
-//     .text-left {
-//         float: left;
-//     }
-// }
 
-// input {
-//     border: none;
-//     border-bottom: 1px solid;
-//     width: 150%;
-//     margin-bottom: 10%;
-// }
 
-// input:focus {
-//     color: $blue;
-//     border: $none;
-//     outline: $none;
-//     border-bottom: 1px solid;
 
-// }
+/* right side CSS  */
+label {
+    margin-top: 3%;
+}
 
-// button {
-//     width: 51%;
-//     height: 25%;
-//     color: $white;
-//     background-color: #C71585;
-//     border: $none;
-// }
+input {
+    border: none;
+    border-bottom: 1px solid;
+    width: 80%;
+    margin-bottom: 3%;
+}
+
+input:focus {
+    color: #19B5FE;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+
+}
+
+button {
+    width: 80%;
+    height: 50px;
+    color: white;
+    background-color: #C71585;
+    border: none;
+}
+
+.btn-disable {
+    background-color: #aa98a9;
+}
+
+.errorMessage {
+    color: red;
+}

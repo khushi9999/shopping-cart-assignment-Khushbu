@@ -1,0 +1,26 @@
+<div class="bg-white mt-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12 card-product">
+                <div class="cart-item-img">
+                    <img style="width: 75px;" src="{{assetsPath}}{{item.imageURL}}" alt="">
+                </div>
+                <div class="product-description w-100">
+                    <div class="heading">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="desc-summary">
+                        <i class="fa fa-minus-circle fa-2x c-pointer" aria-hidden="true" (click)="removeItem(item)"></i>&nbsp;&nbsp;
+                        <span class="item">{{item.count}}</span>&nbsp;&nbsp;
+                        <i class="fa fa-plus-circle fa-2x c-pointer" aria-hidden="true" (click)="addItem(item)"></i>&nbsp;&nbsp;
+                        <span class="cross">x</span>&nbsp;&nbsp;
+                        <span class="item">{{item.price}}</span>
+                        <span class="total-price">Rs <span>{{item.price * item.count}}</span></span>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+

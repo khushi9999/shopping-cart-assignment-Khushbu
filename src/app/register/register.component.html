@@ -7,44 +7,56 @@
       </div>
     </div>
     <div class="col-md-6 right-side">
-      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+      <form [formGroup]="RegistrationForm" (ngSubmit)="onSubmit(RegistrationForm)">
         <div>
-          <label class="input-lable">
-            First Name<br>
-            <input formControlName="fname">
-          </label>
+          <label class="input-lable">First Name</label><br>
+          <input formControlName="fname"><br>
+          <span *ngIf="f['fname'].getError('required')!=null && RegistrationForm.get('fname').touched "
+            class="errorMessage">Please enter First Name</span>
+
         </div>
         <div>
           <div>
             <label>
-              Last Name<br>
-              <input formControlName="lname">
+              Last Name</label><br>
+            <input formControlName="lname"><br>
+            <span class="errorMessage"
+              *ngIf="!RegistrationForm.get('lname').valid && RegistrationForm.get('lname').touched ">Please enter Last
+              Name</span>
 
-            </label>
           </div>
 
           <label>
-            Email<br>
-            <input type="email" formControlName="email" required="email">
+            Email</label><br>
+          <input type="email" formControlName="email" required="email"><br>
+          <span class="errorMessage"
+            *ngIf="!RegistrationForm.get('email').valid && RegistrationForm.get('email').touched ">Please enter
+            Email</span>
 
-          </label>
         </div>
         <div>
           <label>
-            Password<br>
-            <input type="password" formControlName="password">
+            Password </label><br>
+          <input type="password" formControlName="password"><br>
+          <span class="errorMessage"
+            *ngIf="!RegistrationForm.get('password').valid && RegistrationForm.get('password').touched ">Please
+            enter Password</span>
 
-          </label>
         </div>
         <div>
           <label>
-            Confirm Password<br>
-            <input type="password" formControlName="conpassword">
+            Confirm Password</label><br>
+          <input type="password" formControlName="conpassword"><br>
+          <span class="errorMessage"
+            *ngIf="f['conpassword'].getError('required')!=null && RegistrationForm.get('password').touched"
+            class="errorMessage">confirm password is required</span>
+          <span class="errorMessage" *ngIf="f['conpassword'].getError('mustMatch')!=null" class="errorMessage">Password
+            must match</span>
 
-          </label>
         </div>
         <div class="sub-btn">
-          <button type="submit" class="mb-5">SignUp</button>
+          <button type="submit" [disabled]="!RegistrationForm.valid"
+            [ngClass]="RegistrationForm.valid ? 'btn-enable' : 'btn-disable'" class="mb-5">SignUp</button>
         </div>
 
       </form>

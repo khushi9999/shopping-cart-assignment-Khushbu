@@ -1,11 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
+
+
 @import '~bootstrap/scss/bootstrap';
 @import '../src/assets/scss/variable.scss';
 
+@font-face {
+    font-family: 'Blogger Sans';
+    src: url('./assets/fonts/Blogger_Sans.otf');
+}
 
-@mixin carousel-btn-style{
+@mixin carousel-btn-style {
     background: $carousel-butoon-color;
     padding: $carousel-butoon-padding;
     position: $position-relative;
@@ -13,21 +19,34 @@
     height: $auto;
 }
 
-.carousel-control-next{
+@mixin font($font-size: 17px, $line-height: 30px) {
+    font-size: $font-size !important;
+    line-height: $line-height !important;
+}
+
+@mixin c-pointer {
+    cursor: $pointer;
+}
+
+.carousel-control-next {
     justify-content: end;
-    .carousel-control-next-icon{
-       display: $none
+
+    .carousel-control-next-icon {
+        display: $none
     }
+
     .visually-hidden {
         @include carousel-btn-style
     }
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
     justify-content: start;
-    .carousel-control-prev-icon{
-       display: $none
+
+    .carousel-control-prev-icon {
+        display: $none
     }
+
     .visually-hidden {
         @include carousel-btn-style
     }
@@ -40,3 +59,107 @@
     background-color: $carousel-dot-color;
     margin-left: $fifteen-persent;
 }
+
+
+.products:nth-child(even) {
+    .product-area {
+        order: 1;
+    }
+}
+
+.product-title {
+    color: $black;
+}
+
+.w-600 {
+    font-weight: $font-bold;
+}
+
+
+.accordion-item{
+   
+    background-color: #ae1345 !important;
+ 
+}
+
+
+.product-btn {
+    @include font($font-size: 17px, $line-height: 34px);
+    @include c-pointer;
+    background-color: $btn-color;
+    color: $white;
+    font-family: $font-bogger;
+    border: 0px;
+
+    &:hover {
+        background: $btn-hover-color;
+    }
+}
+
+.fancy-line {
+    border: 0;
+    height: $fifteen-persent;
+    position: $position-relative;
+}
+
+.fancy-line {
+    height: 1em;
+    background: $line-background;
+
+    &:before {
+        @extend .fancy-line;
+    }
+}
+
+.c-pointer {
+    @include c-pointer;
+}
+
+p {
+    font-family: $font-bogger;
+    @include font($font-size: 17px, $line-height: 26px);
+}
+
+.modal-title{
+    font-family: $font-bogger;
+    @include font($font-size: 27px, $line-height: 34px);
+    margin: 0px !important;
+}
+
+.modal-body{
+    background: #eeeeee;
+    padding: 0px !important;
+}
+
+.modal-footer{
+    padding: 0px !important;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: $font-bogger;
+}
+
+
+.btn-close:focus {
+    box-shadow:none !important
+}
+
+app-card-item{
+    margin-top: 2px;
+}
+
+
+@media  (max-width: 991px) {
+
+    .container-tablet{
+        // max-width: 705px;
+        max-width: 100%;
+
+    }}

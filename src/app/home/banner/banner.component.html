@@ -1,5 +1,5 @@
 <section>
-    <div class="container mt-5">
+    <div class="container-tablet container mt-5" *ngIf="bannerList.length > 0">
 
         <ngb-carousel #carousel [interval]="20000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
             <ng-template ngbSlide *ngFor="let bannerItem of bannerList; index as i">
@@ -7,11 +7,11 @@
               <!-- <div class="carousel-caption">
                 <h3>My slide {{i + 1}} title</h3>
               </div> -->
-              <a  target="_blank" rel="nofollow noopener noreferrer">
+              <span rel="nofollow noopener noreferrer">
                 <div class="picsum-img-wrapper">
-                  <img src="{{assetsPath}}{{bannerItem.bannerImageUrl}}" alt="{{bannerItem.bannerImageAlt}}"  class="w-100">
+                  <img src="{{assetsPath}}{{bannerItem.bannerImageUrl}}" alt="{{bannerItem.bannerImageAlt}}"   class="w-100">
                 </div>
-              </a>
+              </span>
               </ng-container>
             </ng-template>
           </ngb-carousel>

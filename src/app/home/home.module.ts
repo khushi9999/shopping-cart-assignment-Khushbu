@@ -17,8 +17,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     HomeRoutingModule,
      FormsModule, NgbModule,CommonModule
-
-
   ]
 
 })
