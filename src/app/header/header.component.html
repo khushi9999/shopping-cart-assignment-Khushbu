@@ -1,26 +1,32 @@
 <div class="container-fluid height-90">
     <div class="container-tablet container">
         <nav class="navbar navbar-inverse relative">
-              <div class="navbar-header">
-                  <div routerLink="/home"  role="banner" class="c-pointer"> <img  class="banner-img" src="../../assets/img/logo.png" alt="Sabka Bazzar"/> </div>
-              </div>
-              <div class="login-register" *ngIf="!isLogin">
-                <a routerLink="/auth/login"  routerLinkActive="auth-active-header" class="login-register-button c-pointer">SignIn</a>
-                <a routerLink="/auth/register" class="login-register-button c-pointer"  routerLinkActive="auth-active-header">Register</a>
-              </div>
-              <div class="navbar-items margin-top-custom">
-                  <span class="active"><a routerLink="/home"  routerLinkActive="active-header" class="c-pointer">Home</a></span>
-                  <span><a routerLink="/products"  routerLinkActive="active-header" class="c-pointer" style="margin-left: 5%">Products</a></span>
-                  <ul class="nav navbar-nav navbar-right margin-top-custom cart-button-layout" style="position: absolute;right: 0px;margin-top: 0px;bottom: -6px;">
-                <li class="cart-button  c-pointer"  (click)="open()" role="button">
-                    <div class="cart-icon">
-                        <img class="cart-logo" src="../../../assets/img/cart.svg" alt="Cart">
-                    </div>
-                    <h4 class="cart-count"  > {{totalCartItem}} items</h4>    
-                </li>
-              </ul>  
-              </div>
-            
+            <div class="navbar-header">
+                <div routerLink="/home" role="banner" class="c-pointer"> <img class="banner-img"
+                        src="../../assets/img/logo.png" alt="Sabka Bazzar" /> </div>
+            </div>
+            <div class="login-register" *ngIf="islogin == '0'">
+                <a routerLink="/auth/login" routerLinkActive="auth-active-header"
+                    class="login-register-button c-pointer">SignIn</a>
+                <a routerLink="/auth/register" class="login-register-button c-pointer"
+                    routerLinkActive="auth-active-header">Register</a>
+            </div>
+            <div class="navbar-items margin-top-custom">
+                <span class="active"><a routerLink="/home" routerLinkActive="active-header"
+                        class="c-pointer">Home</a></span>
+                <span><a routerLink="/products" routerLinkActive="active-header" class="c-pointer"
+                        style="margin-left: 5%">Products</a></span>
+                <ul class="nav navbar-nav navbar-right margin-top-custom cart-button-layout"
+                    style="position: absolute;right: 0px;margin-top: 0px;bottom: -6px;">
+                    <li class="cart-button  c-pointer" (click)="open()" role="button">
+                        <div class="cart-icon">
+                            <img class="cart-logo" src="../../../assets/img/cart.svg" alt="Cart">
+                        </div>
+                        <h4 class="cart-count"> {{totalCartItem}} items</h4>
+                    </li>
+                </ul>
+            </div>
+
         </nav>
     </div>
 </div>

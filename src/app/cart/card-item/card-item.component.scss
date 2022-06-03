@@ -1,62 +1,58 @@
-.cart-item-img img{
- //   height: 30%;
+@import '../../../assets/scss/variable.scss';
+
+@mixin fontsizeWight($font-size: 17px, $font-weight: 30px) {
+    font-size: $font-size !important;
+    font-weight: $font-weight !important;
 }
-.card{
-  //  height:150px;
-}
-.fa-minus-circle{
-    color: #bf2957;
-}
-.fa-plus-circle{
-    color: #bf2957;
+
+.fa-minus-circle,
+.fa-plus-circle {
+    color: $btn-color;
 }
 
 .cart-item-img {
     img {
-        width: 100%;
+        width: $peresent-100;
     }
 }
 
-
-// New CSS
 .card-product {
-    display: flex;
-    .cart-item-img {
-        // width: 150px;
+    display: $d-flex;
 
+    .cart-item-img {
         img {
-            width: 100%;
+            width: $peresent-100;
         }
     }
+
     .product-description {
         padding-left: 20px;
-        
+
         .desc-summary {
-            color: #333; 
-            display: flex;
+            color: $summary-color;
+            display: $d-flex;
             align-items: center;
-            margin-top: 10px;      
+            margin-top: $ten-pixer;
+
             span.item {
                 font-size: 17px;
                 margin-top: 4px;
-            }    
-            .total-price{
+            }
+
+            .total-price {
                 position: absolute;
                 right: 30px;
                 font-size: 20px;
             }
         }
-        
     }
 }
 
 @media (min-width: 320px) {
     .card-product {
-      
         .product-description {
             .heading {
-                font-size: 14px;
-                font-weight: 500;
+                @include fontsizeWight($font-size: 14px, $font-weight: 500)
             }
         }
     }
@@ -64,11 +60,9 @@
 
 @media (min-width: 482px) {
     .card-product {
-      
         .product-description {
             .heading {
-                font-size: 18px;
-                font-weight: 500;
+                @include fontsizeWight($font-size: 18px, $font-weight: 500)
             }
         }
     }

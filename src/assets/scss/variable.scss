@@ -5,6 +5,7 @@ $none:none;
 $position-relative:relative !important;
 $auto:auto !important;
 $fifty-peresent :50% !important;
+$peresent-100 :100% ;
 $ten-pixer:10px !important;
 $fifteen-persent :15px !important;
 $black:black;
@@ -15,6 +16,39 @@ $font-bogger: "Blogger Sans" !important ;
 $font-bold:600 !important;
 $btn-color:#bf2957;
 $btn-hover-color:#d4124d;
+$btn-disable-color:#aa98a9;
 $line-background: radial-gradient(ellipse at top, rgb(18 18 19 / 16%) 0%, rgb(254 254 254 / 7%) 67%);
 $line-background-deam: radial-gradient(ellipse at top, rgba(119, 119, 119, 0.17) 0%, rgba(208, 207, 207, 0) 67%);
 $pointer:pointer;
+$no-padding-margin : 0px !important;
+$model-body-color:#eeeeee;
+$accordian-color:#ae1345 !important;
+$mt-2:2px;
+$d-flex:flex;
+$summary-color:#333;
+$footer-bg-color:#eaeaea;
+$active-header:#50dae3;
+$header-shdow:1px 10px 10px #eaeaea;
+$nav-item-color:#696767;
+$cart-btn:#F0F0F0;
+$error-color:red;
+$sidebar-color: #818181;
+$sidebar-list-boder:#e0e0e0;
+$product-description-bg :#ececec;
+
+@mixin carousel-btn-style {
+    background: $carousel-butoon-color;
+    padding: $carousel-butoon-padding;
+    position: $position-relative;
+    width: $auto;
+    height: $auto;
+}
+
+@mixin font($font-size: 17px, $line-height: 30px) {
+    font-size: $font-size !important;
+    line-height: $line-height !important;
+}
+
+@mixin c-pointer {
+    cursor: $pointer;
+}

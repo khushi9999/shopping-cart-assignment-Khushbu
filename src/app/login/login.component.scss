@@ -1,43 +1,45 @@
-/*  left side CSS */
+@import '../../assets/scss/variable.scss';
+
+
 .left-side {
     .text-left {
         float: left;
     }
 }
 
-/* right side CSS  */
 label {
     margin-top: 3%;
 }
 
 input {
-    border: none;
+    border: $none;
     border-bottom: 1px solid;
     width: 80%;
     margin-bottom: 3%;
-}
-
-input:focus {
-    color: #19B5FE;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid;
-
+    &:focus {
+        color: $blue;
+        border: $none;
+        outline: $none;
+        border-bottom: 1px solid;
+    }
 }
 
 button {
     width: 80%;
     height: 50px;
-    color: white;
-    background-color: #C71585;
-    border: none;
+    color: $white;
+    background-color: $btn-color;
+    border: $none;
+    &:hover{
+    background-color: $btn-hover-color;
+    }
 }
 .btn-disable {
-    background-color: #aa98a9;
+    background-color: $btn-disable-color;
 }
 
 .btn-enable-message {
-    display: none;
+    display: $none;
 }
 
 .btn-disable-message {
@@ -45,5 +47,5 @@ button {
 }
 
 .errorMessage {
-    color: red;
+    color:$error-color ;
 }

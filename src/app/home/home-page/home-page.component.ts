@@ -16,7 +16,11 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.assetsPath = this.commonService.assetsFolderPath;
+    if (this.dataService.allcetegory.length == 0) {
     this.getData();
+    } else {
+      this.categories = this.dataService.allcetegory;
+    }
   }
 
   getData() {
@@ -33,6 +37,7 @@ export class HomePageComponent implements OnInit {
     this.categories = this.categories.sort(function (a: any, b: any) {
       return a.order - b.order;
     });
+    this.dataService.allcetegory = this.categories;
   }
 
 }

@@ -1,32 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
-
-
 @import '~bootstrap/scss/bootstrap';
 @import '../src/assets/scss/variable.scss';
-
 @font-face {
     font-family: 'Blogger Sans';
     src: url('./assets/fonts/Blogger_Sans.otf');
 }
 
-@mixin carousel-btn-style {
-    background: $carousel-butoon-color;
-    padding: $carousel-butoon-padding;
-    position: $position-relative;
-    width: $auto;
-    height: $auto;
-}
-
-@mixin font($font-size: 17px, $line-height: 30px) {
-    font-size: $font-size !important;
-    line-height: $line-height !important;
-}
-
-@mixin c-pointer {
-    cursor: $pointer;
-}
 
 .carousel-control-next {
     justify-content: end;
@@ -60,7 +38,6 @@
     margin-left: $fifteen-persent;
 }
 
-
 .products:nth-child(even) {
     .product-area {
         order: 1;
@@ -75,13 +52,9 @@
     font-weight: $font-bold;
 }
 
-
-.accordion-item{
-   
-    background-color: #ae1345 !important;
- 
+.accordion-item {
+    background-color: $accordian-color;
 }
-
 
 .product-btn {
     @include font($font-size: 17px, $line-height: 34px);
@@ -89,8 +62,7 @@
     background-color: $btn-color;
     color: $white;
     font-family: $font-bogger;
-    border: 0px;
-
+    border: $no-padding-margin;
     &:hover {
         background: $btn-hover-color;
     }
@@ -120,46 +92,41 @@ p {
     @include font($font-size: 17px, $line-height: 26px);
 }
 
-.modal-title{
+.modal-title {
     font-family: $font-bogger;
     @include font($font-size: 27px, $line-height: 34px);
-    margin: 0px !important;
+    margin: $no-padding-margin;
 }
 
-.modal-body{
-    background: #eeeeee;
-    padding: 0px !important;
+.modal-body {
+    background: $model-body-color;
+    padding: $no-padding-margin;
 }
 
-.modal-footer{
-    padding: 0px !important;
+.modal-footer {
+    padding: $no-padding-margin;
 }
-
 
 html,
 body {
-    height: 100%;
+    height: $peresent-100;
 }
 
 body {
-    margin: 0;
+    margin: $no-padding-margin;
     font-family: $font-bogger;
 }
 
-
 .btn-close:focus {
-    box-shadow:none !important
+    box-shadow: none !important
 }
 
-app-card-item{
-    margin-top: 2px;
+app-card-item {
+    margin-top: $mt-2;
 }
 
-
-@media  (max-width: 991px) {
-
-    .container-tablet{
-        // max-width: 705px;
-        max-width: 100%;
-
-    }}
+@media (max-width: 991px) {
+    .container-tablet {
+        max-width: $peresent-100;
+    }
+}

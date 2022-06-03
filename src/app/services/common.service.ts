@@ -17,6 +17,7 @@ export class CommonService {
   cartItems: any = [];
   totelItemSiseInCart = new Subject();
   totelItemSiseCartPrice = new Subject();
+  isLogin =   new Subject();
   constructor() { }
 
   openModel() {
@@ -61,6 +62,8 @@ export class CommonService {
     let totalprice = this.cartItems.reduce((ele: any, cur: any) => {
       return ele + (cur.count * cur.price)
     }, 0)
+
+    localStorage.setItem('cartItem', JSON.stringify(this.cartItems))
     this.totelItemSiseInCartPrice(totalprice);
   }
 

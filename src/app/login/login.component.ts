@@ -56,9 +56,10 @@ export class LoginComponent implements OnInit {
   onSubmit(form: FormGroup) {
     let email = form.value.email;
     let password = form.value.password;
-
     let exists = this.isUserExist(this.userArray, email, password);
     if (exists) {
+      sessionStorage.setItem('isLogin', '1');
+      this.commonService.isLogin.next('1')
       this.router.navigate(['/home']);
     } else {
       this.wrongCredintialsMessage = true

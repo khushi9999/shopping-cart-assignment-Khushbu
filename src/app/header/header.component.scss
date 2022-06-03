@@ -1,3 +1,5 @@
+@import '../../assets/scss/variable.scss';
+
 .login-singup {
     text-align: right;
     display: inline-block;
@@ -9,58 +11,40 @@
     max-width: 151px;
 }
 
-.cart-imag {
-    text-align: right;
-    background-color: #F0F0F0;
-    width: 90px;
-    height: 50px;
-    float: right;
-
-    .cart-logo {
-        filter: invert(16%) sepia(71%) saturate(5224%) hue-rotate(311deg) brightness(86%) contrast(92%);
-    }
-}
-
 .cart-iteamcount {
     white-space: nowrap;
 }
 
 .nav .nav-item a {
     font-weight: 500;
-    color: gray;
+    color: $gray;
 }
 
-.login-singup-a {
-    color: black;
-    text-decoration: none;
-}
-
-// Updatations - Heena
 .relative {
     position: relative;
 }
 
 .height-90 {
     height: 90px;
-    width: 100%;
-    box-shadow: 1px 10px 10px #eaeaea;
+    width: $peresent-100;
+    box-shadow: $header-shdow;
 }
 
+.login-singup-a,
 .nav .nav-item .login-singup-a {
-    color: black;
-    text-decoration: none;
+    color: $black;
+    text-decoration: $none;
 }
 
 .navbar-items {
     width: 63%;
 
     a {
-       
-        color: #696767 ;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-        text-decoration: none;
+        color: $nav-item-color;
+        text-decoration: $none;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: $none;
     }
 }
 
@@ -70,7 +54,7 @@
     top: 2px;
 
     .login-register-button {
-        color: #000;
+        color: $black;
         text-decoration: none;
 
         &:nth-child(2) {
@@ -82,7 +66,7 @@
 .cart-button {
     width: 120px;
     float: right;
-    background-color: #F0F0F0;
+    background-color: $cart-btn;
     padding: 5px 10px;
 
     .cart-icon {
@@ -103,9 +87,7 @@
 
 @media (min-width: 320px) {
     .navbar.navbar-inverse {
-
         .navbar-header {
-
             a img {
                 width: 80px;
             }
@@ -144,9 +126,11 @@
         .cart-button {
             width: auto;
             padding: 0px 9px;
+
             .cart-icon {
                 width: 25px;
-                .cart-logo{
+
+                .cart-logo {
                     padding-top: 7px;
                 }
             }
@@ -156,42 +140,26 @@
 
 @media (min-width: 482px) {
     .navbar.navbar-inverse {
-
         .navbar-header {
-
             a img {
                 width: 150px;
             }
         }
-
     }
 }
 
 
-
-@media (max-width: 482px) {
-    .banner-img {
-        // max-width: 251px;
+@media (max-width: 991px) {
+    .container-tablet {
+        max-width: $peresent-100;
     }
 }
 
-
-
-@media  (max-width: 991px) {
-
-    .container-tablet{
-        // max-width: 705px;
-        max-width: 100%;
-
-    }}
-
-
-
-
-.active-header{
-    color: #000 !important;
+.active-header {
+    color: $black !important;
 }
+
 .auth-active-header {
     font-weight: 800;
-    color: #50dae3 !important;
+    color: $active-header !important;
 }

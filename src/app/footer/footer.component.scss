@@ -1,22 +1,13 @@
-// .footer {
-//     position: fixed;
-//     left: 0;
-//     bottom: 0;
-//     width: 100%;
-//     background-color: #BEBEBE;
-//     color: black;
-//     text-align: center;
-//  }
+@import '../../assets/scss/variable.scss';
 
-//  Updates - Heena
 footer {
   text-align: center;
   position: fixed;
   bottom: 0;
   font-weight: 300;
   width: 100%;
-  background-color: #eaeaea;
-  color: black;
-  font-size: 12px;
+  background-color: $footer-bg-color;
+  color:$black;
   padding: 5px;
+  @include font($font-size: 12px, $line-height: 25px)
 }

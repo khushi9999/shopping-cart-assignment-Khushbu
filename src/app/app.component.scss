@@ -1,10 +1,12 @@
+@import './../assets/scss/variable.scss';
+
 .container .row .row .login-singup {
 	text-align: right;
 	display: inline-block;
 }
-.container .row .cart-imag {
+.container .row {
 	text-align: right;
-	background-color: grey;
+	background-color: $gray;
 	width: 90px;
 	height: 50px;
 	float: right;

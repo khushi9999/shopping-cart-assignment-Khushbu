@@ -8,7 +8,8 @@
                 <div class="main-content">
                     <div class="container-fluid">
                         <div class="row mt-2 mb-4 justify-content-center">
-                            <div class=" col-my-sm col-my-tb-12  col-my-sm-6  col-md-4 col-xl-3 border-line-right" *ngFor="let product of products">
+                            <div class=" col-my-sm col-my-tb-12  col-my-sm-6  col-md-4 col-xl-3 border-line-right"
+                                *ngFor="let product of products">
                                 <div class="product-item">
                                     <div class="product-name">
                                         <h2 style="
@@ -17,8 +18,8 @@
                                     </div>
                                     <div class="product-container">
                                         <div class="product-image">
-                                            <!-- <img src="../../assets/static/images/products/fruit-n-veg/kiwi-green.jpg"> -->
-                                            <img class="w-100" src="{{assetsPath}}{{product.imageURL}}" alt="{{product.name}}">
+                                            <img class="w-100" src="{{assetsPath}}{{product.imageURL}}"
+                                                alt="{{product.name}}">
                                         </div>
                                         <div class="product-desc truncate">
                                             <p>{{product.description}}</p>
@@ -29,11 +30,12 @@
                                             <p class="" style="padding-top: 10px">MRP Rs. {{product.price}}</p>
                                         </div>
                                         <div class="product-button">
-                                            <div class="product-btn buy-btn" (click)="showSuccess(product)" role="button" >Buy Now</div>
+                                            <div class="product-btn buy-btn" (click)="showSuccess(product)"
+                                                role="button">Buy Now</div>
                                         </div>
 
                                         <div class="product-button-tablet" (click)="showSuccess(product)" role="button">
-                                            <div class="product-btn buy-btn"  >Buy Now @ Rs. {{product.price}}</div>
+                                            <div class="product-btn buy-btn">Buy Now @ Rs. {{product.price}}</div>
                                         </div>
                                     </div>
                                 </div>

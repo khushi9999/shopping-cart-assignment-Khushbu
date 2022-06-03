@@ -23,12 +23,19 @@ export class ProductsListComponent implements OnInit {
   getData() {
     this.dataServices.getData(this.commonService.productsApi).subscribe((res) => {
       this.products = res;
+      this.filterCatList();
     });
+  }
+
+  filterCatList() {
+    const key = 'category';
+    const arrayUniqueByKey = [...new Map(this.products.map((item: { [x: string]: any; }) =>
+      [item[key], item])).values()];
   }
 
   showSuccess(product: any) {
     this.commonService.ckeckItemIncart(product)
-    this.toastr.success("added to cart");
+    this.toastr.success("Added to cart");
   }
 
 }

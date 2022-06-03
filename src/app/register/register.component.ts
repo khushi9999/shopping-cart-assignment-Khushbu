@@ -60,8 +60,6 @@ export class RegisterComponent implements OnInit {
     }
   }
   onSubmit(form: FormGroup) {
-
-    console.log('Valid?', form.valid); // true or false
     this.registrationData.fname = form.value.fname;
     this.registrationData.lname = form.value.lname;
     this.registrationData.email = form.value.email;
@@ -70,9 +68,7 @@ export class RegisterComponent implements OnInit {
 
 
     this.dataService.postData(this.registrationData).subscribe(res => {
-      console.log(res);
       if (res != "") {
-        debugger
         this.router.navigate(['auth/login']);
       }
     })
