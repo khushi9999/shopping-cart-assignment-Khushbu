@@ -2,6 +2,8 @@
 
 This is the base folder for the shopping cart exercise. You will have all the static assets and mock server responses available in this repo.
 
+
+
 ## Getting Started
 
 Clone this repo and run following command for starting the mock server:
@@ -13,3 +15,6 @@ npm run start
 yarn install
 yarn start
 ```
+
+# Demo Video 
+https://www.loom.com/share/333f38abc58d4fbd969bd1012979c15b
